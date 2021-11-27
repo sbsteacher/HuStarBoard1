@@ -17,10 +17,20 @@ public class BoardWriteServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-       String title = req.getParameter("title");
-       String ctnt = req.getParameter("ctnt");
+        String title = req.getParameter("title");
+        String ctnt = req.getParameter("ctnt");
+        String writer = req.getParameter("writer");
 
         System.out.println("title : " + title);
         System.out.println("ctnt : " + ctnt);
+        System.out.println("writer : " + writer);
+
+        BoardVO param = new BoardVO();
+        param.setTitle(title);
+        param.setCtnt(ctnt);
+        param.setWriter(writer);
+
+        int result = BoardDAO.insBoard(param);
+
     }
 }
