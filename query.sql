@@ -1,0 +1,8 @@
+CREATE TABLE t_board1(
+     iboard INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+     title VARCHAR(100) NOT NULL,
+     ctnt VARCHAR(2000) NOT NULL,
+     writer VARCHAR(5) NOT NULL,
+     rdt DATETIME DEFAULT NOW()
+);
+
