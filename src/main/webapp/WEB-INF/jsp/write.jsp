@@ -17,7 +17,7 @@
                 <textarea name="ctnt" placeholder="내용"></textarea>
             </div>
             <div>
-                <input type="text" name="write" placeholder="작성자">
+                <input type="text" name="writer" placeholder="작성자">
             </div>
             <div>
                 <input type="submit" value="저장">
