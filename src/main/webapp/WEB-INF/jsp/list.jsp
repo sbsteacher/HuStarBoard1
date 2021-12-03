@@ -10,6 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/css/common.css?ver=1">
     <title>List</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
     <div>
         <a href="/write">글쓰기</a>
     </div>
-    <div>
+    <div class="container">
         <table>
             <tr>
                 <th>번호</th>
@@ -26,7 +27,7 @@
                 <th>작성일시</th>
             </tr>
             <% for(BoardVO vo : data) { %>
-            <tr>
+            <tr onclick="moveToDetail(<%= vo.getIboard() %>);">
                 <td><%= vo.getIboard() %></td>
                 <td><%= vo.getTitle() %></td>
                 <td><%= vo.getWriter() %></td>
@@ -35,5 +36,6 @@
             <% } %>
         </table>
     </div>
+    <script src="/res/js/list.js"></script>
 </body>
 </html>

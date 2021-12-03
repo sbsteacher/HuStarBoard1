@@ -32,5 +32,6 @@ public class BoardWriteServlet extends HttpServlet {
 
         int result = BoardDAO.insBoard(param);
 
+        res.sendRedirect("/list");
     }
 }

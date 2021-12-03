@@ -1,0 +1,11 @@
+/* 주석 */
+* { padding: 0; margin: 0; box-sizing: border-box; }
+a { text-decoration: none; color:#000; }
+a:hover { background-color: #e3e2e2; }
+table, th, td { border: 1px solid #232323; border-collapse: collapse; }
+th, td { padding: 6px; }
+
+.container {
+    min-height: 80vh; display: flex;
+    justify-content: center; align-items: center;
+}
