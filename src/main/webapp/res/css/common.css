@@ -9,3 +9,5 @@ th, td { padding: 6px; }
     min-height: 80vh; display: flex;
     justify-content: center; align-items: center;
 }
+
+.container table tr:not(:first-child):hover { background-color: #e3e2e2; cursor: pointer; }

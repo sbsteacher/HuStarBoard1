@@ -54,4 +54,38 @@ public class BoardDAO {
         }
         return list;
     }
+
+    public static BoardVO selBoardDetail(BoardVO param) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        String sql = "SELECT * FROM t_board1 WHERE iboard = ?";
+        try {
+            con = DbUtils.getCon();
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, param.getIboard());
+            rs = ps.executeQuery();
+            if(rs.next()){
+                String title = rs.getString("title");
+                String ctnt = rs.getString("ctnt");
+                String writer = rs.getString("writer");
+                String rdt = rs.getString("rdt");
+
+                BoardVO vo = new BoardVO();
+                vo.setIboard(param.getIboard());
+                vo.setTitle(title);
+                vo.setCtnt(ctnt);
+                vo.setWriter(writer);
+                vo.setRdt(rdt);
+                return vo;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DbUtils.close(con, ps, rs);
+        }
+        return null;
+    }
+
+
 }

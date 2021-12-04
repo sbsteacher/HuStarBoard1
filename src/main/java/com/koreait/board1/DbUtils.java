@@ -5,7 +5,7 @@ import java.sql.*;
 public class DbUtils {
 
     public static Connection getCon() throws ClassNotFoundException, SQLException {
-        final String URL = "jdbc:mysql://localhost:3308/hustar";
+        final String URL = "jdbc:mysql://localhost:3306/hustar";
         final String USER_NAME = "root";
         final String PASSWORD = "koreait";
         Class.forName("com.mysql.cj.jdbc.Driver");
